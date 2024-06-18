@@ -25,6 +25,27 @@
     --input: 220 13% 91%;
     --ring: 262.1 83.3% 57.8%;
     --radius: 0.5rem;
+
+    --body: #ffffff;
+    --components-bg: #f7f8fc;
+    --aside-bg-tc: #fff2f2;
+    --aside-bg-ac: #fff9f1;
+    --aside-bg-rc: #edffec; 
+    --aside-bg-dc: #eefcff;
+    --bright-red: #ff0000;
+    --wine: #b60000;
+    --orange: #ff6a0c;
+    --green: #7fc316;
+    --bright-blue: #296bff; 
+    --common-blue:  #3538ae;
+    --dark-blue: #0f1058;
+    --gear: #1d0f9f;
+    --grey: #b0b2bc;
+    --black: #060607;
+    --table2: #f8f9fe;
+    --table3: #ebebf7;
+    --table4: #e5e6f6;
+
   }
 
 }
