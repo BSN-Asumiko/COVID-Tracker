@@ -1,6 +1,6 @@
 import useApi from "./services/useApi";
 import { URL_ALL } from "./config/urls";
-import { Button } from "./components/ui/button";
+import { Navbar } from '../src/components/ui/navbar';
 
 
 function App() {
@@ -9,10 +9,7 @@ function App() {
   
   return (
     <>
-      <h1 className="text-3xl font-bold underline">
-    Hello world!
-      </h1>
-      <Button>Click me</Button>
+      <Navbar />
     </>
   )
 }

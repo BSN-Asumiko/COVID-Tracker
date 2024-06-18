@@ -28,3 +28,14 @@
   }
 
 }
+
+@font-face {
+  font-family: 'Themify';
+  src: url('/assets/fonts/themify.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.icon {
+  font-family: 'Themify', sans-serif;
+}
