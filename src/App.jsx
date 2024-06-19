@@ -1,6 +1,7 @@
 import useApi from "./services/useApi";
 import { URL_ALL } from "./config/urls";
-import { Navbar } from '../src/components/ui/navbar';
+import Navbar from './components/Navbar/Navbar';
+
 
 
 function App() {
