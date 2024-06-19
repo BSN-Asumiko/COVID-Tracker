@@ -1,8 +1,8 @@
 @tailwind base;
-  @tailwind components;
-  @tailwind utilities;
+@tailwind components;
+@tailwind utilities;
 
-  
+
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -25,6 +25,53 @@
     --input: 220 13% 91%;
     --ring: 262.1 83.3% 57.8%;
     --radius: 0.5rem;
+
   }
 
+
 }
+
+/* @font-face {
+  font-family: 'Lanenar Lane';
+  src: url('/public/assets/fonts/lanenar_Lane.eot');
+  src: url('/public/assets/fonts/lanenar_Lane.eot?#iefix') format('embedded-opentype'),
+    url('/public/assets/fonts/lanenar_Lane.woff') format('woff'),
+    url('/public/assets/fonts/lanenar_Lane.ttf') format('truetype'),
+    url('/public/assets/fonts/lanenar_Lane.svg#LanenarLane') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Fontawesome';
+  src: url('/public/assets/fonts/fontawesome-webfont.eot');
+  src: url('/public/assets/fonts/fontawesome-webfont.eot?#iefix') format('embedded-opentype'),
+    url('/public/assets/fonts/fontawesome-webfont.woff') format('woff'),
+    url('/public/assets/fonts/fontawesome-webfont.ttf') format('truetype'),
+    url('/public/assets/fonts/fontawesome-webfont.svg#Fontawesome') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Glyphicons Halflings';
+  src: url('/public/assets/fonts/glyphicons-halflings-regular.eot');
+  src: url('/public/assets/fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'),
+    url('/public/assets/fonts/glyphicons-halflings-regular.woff2') format('woff2'),
+    url('/public/assets/fonts/glyphicons-halflings-regular.woff') format('woff'),
+    url('/public/assets/fonts/glyphicons-halflings-regular.ttf') format('truetype'),
+    url('/public/assets/fonts/glyphicons-halflings-regular.svg#GlyphiconsHalflings') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Themify';
+  src: url('/public/assets/fonts/themify.eot');
+  src: url('/public/assets/fonts/themify.eot?#iefix') format('embedded-opentype'),
+    url('/public/assets/fonts/themify.woff') format('woff'),
+    url('/public/assets/fonts/themify.ttf') format('truetype'),
+    url('/public/assets/fonts/themify.svg#Themify') format('svg');
+  font-weight: normal;
+  font-style: normal;
+} */
