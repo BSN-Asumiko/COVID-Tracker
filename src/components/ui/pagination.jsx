@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import * as React from "react"
 import {
   ChevronLeftIcon,
@@ -7,6 +8,7 @@ import {
 
 import { cn } from "@/lib/utils"
 import { buttonVariants } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const Pagination = ({
   className,
@@ -39,7 +41,7 @@ const PaginationLink = ({
   size = "icon",
   ...props
 }) => (
-  <a
+  <Link
     aria-current={isActive ? "page" : undefined}
     className={cn(buttonVariants({
       variant: isActive ? "outline" : "ghost",

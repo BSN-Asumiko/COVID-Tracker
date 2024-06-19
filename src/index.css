@@ -47,11 +47,13 @@
     --col-dark-blue: rgb(15, 16, 88);
     --col-grey: rgb(176, 178, 188);
     --col-black: rgb(6, 6, 7);
-    --col-table2: rgb(248, 249, 254);
-    --col-table3: rgb(235, 235, 247);
-    --col-table4: rgb(229, 230, 246);
+    --col-bg-table-odd: rgb(248, 249, 254);
+    --col-bg-table-accent: rgb(235, 235, 247);
+    --col-bg-table-accent-dark: rgb(229, 230, 246);
 
 }
+
+
 * {
   box-sizing: border-box;
   margin: 0;
