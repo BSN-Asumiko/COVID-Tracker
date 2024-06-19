@@ -1,4 +1,3 @@
-import React from 'react'
 
 const Tracker1 = () => {
   return (
@@ -6,4 +5,4 @@ const Tracker1 = () => {
   )
 }
 
-export default Tracker1
+export default Tracker1;

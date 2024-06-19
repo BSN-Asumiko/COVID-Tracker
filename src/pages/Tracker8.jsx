@@ -7,4 +7,4 @@ const Tracker8 = () => {
   )
 }
 
-export default Tracker8
+export default Tracker8;

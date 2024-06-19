@@ -9,7 +9,7 @@ import { URL_COUNTRIES } from '@/config/urls';
 import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 
-const Tracker3 = () => {
+const Tracker2 = () => {
   const data = useApi(URL_COUNTRIES) || [];
   const { page } = useParams();
   const [itemsToShow, setItemsToShow] = useState(10);
@@ -84,4 +84,4 @@ const Tracker3 = () => {
   )
 }
 
-export default Tracker3
+export default Tracker2;

@@ -3,4 +3,5 @@ const Tracker3 = () => {
     <div>Tracker3</div>
   )
 }
-export default Tracker3
+
+export default Tracker3;
