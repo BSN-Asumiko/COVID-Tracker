@@ -12,6 +12,7 @@ import Tracker8 from "@/pages/Tracker8";
 import { createBrowserRouter } from "react-router-dom";
 
 
+
 const router = createBrowserRouter ([
     {
         path:"/",
