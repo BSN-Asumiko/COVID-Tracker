@@ -7,12 +7,10 @@ const useApi = (url) => {
         const getData = async (url) => {
             try {
                 const response = await fetch(url);
-                console.log(response);
                 if (!response.ok) {
                     throw new Error (`Error ${response.status}`);
                 }
                 const jsonData = await response.json();
-                console.log(jsonData);
                 setData(jsonData);
             }   catch(error) {
                 console.error(error.message);
