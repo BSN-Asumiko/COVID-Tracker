@@ -33,7 +33,7 @@ const router = createBrowserRouter ([
                 element: <Tracker1 />
             },
             {
-                path:"/tracker/2",
+                path:"/tracker/2/:page?",
                 element: <Tracker2 />
             },
             {
