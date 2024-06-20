@@ -27,9 +27,8 @@
     --radius: 0.3rem;
 
   }
-
-
 }
+
 
 :root {
   --col-body: rgb(255, 255, 255);
@@ -96,8 +95,17 @@ body {
   border: 0;
 }
 
-
-
 .sorted-column-rgba {
   background-color: rgba(var(--col-bg-table-accent-dark), 0.5);;
+}
+
+@layer utilities {
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+      display: none;
+  }
+ /* Hide scrollbar for IE, Edge and Firefox */
+  .no-scrollbar {
+      -ms-overflow-style: none;  /* IE and Edge */
+      scrollbar-width: none;  /* Firefox */
 }
