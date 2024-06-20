@@ -35,12 +35,12 @@ const TablePagination = ({ totalPages, currentPage }) => {
     const paginationItems = getPagination();
 
     return (
-        <Pagination className="w-auto justify-end mx-2">
+        <Pagination className="w-auto justify-end mx-2s">
             <PaginationContent>
                 <PaginationItem>
                     <PaginationPrevious
                         as={Link}
-                        to={`/tracker/3/${Math.max(currentPage - 1, 1)}`}
+                        to={`/tracker/2/${Math.max(currentPage - 1, 1)}`}
                     />
                 </PaginationItem>
                 {paginationItems.map((page, index) => (
@@ -48,7 +48,7 @@ const TablePagination = ({ totalPages, currentPage }) => {
                         {page === '...' ? (
                             <PaginationEllipsis />
                         ) : (
-                            <PaginationLink as={Link} to={`/tracker/3/${page}`}>
+                            <PaginationLink as={Link} to={`/tracker/2/${page}`}>
                                 {page}
                             </PaginationLink>
                         )}
@@ -57,7 +57,7 @@ const TablePagination = ({ totalPages, currentPage }) => {
                 <PaginationItem>
                     <PaginationNext
                         as={Link}
-                        to={`/tracker/3/${Math.min(currentPage + 1, totalPages)}`}/>
+                        to={`/tracker/2/${Math.min(currentPage + 1, totalPages)}`}/>
                 </PaginationItem>
             </PaginationContent>
         </Pagination>

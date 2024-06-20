@@ -33,11 +33,11 @@ const router = createBrowserRouter ([
                 element: <Tracker1 />
             },
             {
-                path:"/tracker/2",
+                path:"/tracker/2/:page?",
                 element: <Tracker2 />
             },
             {
-                path:"/tracker/3/:page?",
+                path:"/tracker/3",
                 element: <Tracker3 />
             },
             {
