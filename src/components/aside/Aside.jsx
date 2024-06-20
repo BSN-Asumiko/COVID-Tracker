@@ -1,67 +1,60 @@
 import useApi from "@/services/useApi";
 import { URL_ALL } from "@/config/urls";
 import { URL_COUNTRIES } from "@/config/urls";
+import TotalListItem from "./TotalListItem";
+import TopCountriesItem from "./TopCountriesItem";
 
 
 const Aside = () => {
 
-    const dataGeneral = useApi(URL_ALL) || [];
-    const dataCountries = useApi(URL_COUNTRIES)|| [];
-    const top10Countries = dataCountries.splice(0, 10) 
-    console.log(top10Countries)
+    const dataGeneral = useApi(URL_ALL);
+    let dataCountries = useApi(URL_COUNTRIES);
+    let top10Countries = dataCountries.sort((a, b) => b.deaths - a.deaths).slice(0, 10); 
 
     return (
-        <div className="w-[30%] h-[100vh]">
-            <div className="h-[auto]">
-                <h1>COVID-19 Tracker</h1>
+        <div className="w-[30%] h-[100vh] p-[1em] overflow-hidden">
+            <div className="overflow-y-auto h-[100%] w-[100%] no-scrollbar">
+                <h1 className="text-[1.5em] text-[color:var(--col-black)] font-semibold">COVID-19 Tracker</h1>
                 <ul>
                     <TotalListItem 
                     text="Total Case" 
-                    today={dataGeneral.todayCases} 
+                    today={`+${dataGeneral.todayCases}`}
                     cases={dataGeneral.cases} 
-                    className="otro estilo"/>
+                    className="bg-[color:var(--col-aside-bg-tc)] hover:border hover:border-[color:var(--col-bright-red)] hover:border-solid"
+                    casesStyle="text-[color:var(--col-bright-red)]"/>
+
                     <TotalListItem 
                     text="Active Case" 
-                    today="" 
+                    today=""
                     cases={dataGeneral.active} 
-                    className="otro estilo"/>
+                    className="bg-[color:var(--col-aside-bg-ac)] hover:border hover:border-[color:var(--col-orange)] hover:border-solid"
+                    casesStyle="text-[color:var(--col-orange)]"/>
+
                     <TotalListItem 
                     text="Recovered Case" 
-                    today={dataGeneral.todayRecovered} 
+                    today={`+${dataGeneral.todayRecovered}`} 
                     cases={dataGeneral.recovered} 
-                    className="otro estilo"/>
+                    className="bg-[color:var(--col-aside-bg-rc)] hover:border hover:border-[color:var(--col-green)] hover:border-solid"
+                    casesStyle="text-[color:var(--col-green)]"/>
+
                     <TotalListItem 
                     text="Deaths Case" 
-                    today={dataGeneral.todayDeaths} 
+                    today={`+${dataGeneral.todayDeaths} `}
                     cases={dataGeneral.deaths} 
-                    className="otro estilo"/>
+                    className="bg-[color:var(--col-aside-bg-dc)] hover:border hover:border-[color:var(--col-common-blue)] hover:border-solid"
+                    casesStyle="text-[color:var(--col-common-blue)]"/>
                 </ul>
-                <h6>Top 10 Country</h6>
+                <h6 className="text-[color:var(--col-dark-blue)] text-[1.1em] font-semibold mt-[0.5em]">Top 10 Country</h6>
                 <ul>
-                {top10Countries.map((object, index) => (
-                    <li key={index} className="w-[90%] p-[0.5em] m-auto mt-[0.4em] text-[color:var(--col-dark-blue)] flex justify-between items-center border border-[color:rgb(235,236,241)] border-solid shadow-[0px_0px_7px_3px_rgba(0,0,0,0.03)_] rounded-[3px]">
-                        <span className="w-[80%] flex justify-start items-center">
-                            <img className="w-[1.8em] rounded-[2px] ml-[0.2em] mr-[0.8em]" src={object.countryInfo.flag} alt={`${object.country} flag`}/>
-                            <p className="text-[x-small] ">{object.country}</p>
-                        </span>
-                        <span className="text-[x-small] font-bold">
-                            {object.cases}
-                        </span>
-                    </li>
-            ))}
+                    {top10Countries.map((object, index) => (
+                        <TopCountriesItem object={object} key={index} />
+                    ))}
                 </ul>
             </div>
         </div>
     )
 }
 
-function TotalListItem ({text, today, cases, className}) {
-    return (
-        <>
-        <li className={`estilos ${className}`}>{text}<span><span>{today}</span> {cases}</span></li>
-        </>
-    )
-}
 
 
 export default Aside
