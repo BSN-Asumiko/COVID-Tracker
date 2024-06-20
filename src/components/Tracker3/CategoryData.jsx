@@ -1,6 +1,7 @@
 import useApi from "@/services/useApi";
 import { URL_COUNTRIES } from "@/config/urls";
 import InfoBadge from "./InfoBadge";
+import ListTopCategories from "./ListTopCategories";
 
  
 
@@ -8,48 +9,68 @@ const CategoryData = () => {
     const data = useApi(URL_COUNTRIES) || [];
     
 
-    const tenTopCases = data?.sort((a, b) => b.cases - a.cases).slice(0,10);
-    const todayCases = data?.sort((a, b) => b.todayCases - a.todayCases).slice(0,10);
-    const todayDeaths = data?.sort((a, b) => b.todayDeaths - a.todayDeaths).slice(0,10);
+    const tenTopCases = data?.map((country) => {
+        return {
+            name: country.country,
+            flag: country.countryInfo.flag,
+            category: country.cases
+        }
+    }).sort((a, b) => b.category - a.category).slice(0,10);
+
+
+    const todayCases = data?.map((country) => {
+        return {
+            name: country.country,
+            flag: country.countryInfo.flag,
+            category: country.todayCases
+        }
+    }).sort((a, b) => b.category - a.category).slice(0,10);
+
+    const todayDeaths = data?.map((country) => {
+        return {
+            name: country.country,
+            flag: country.countryInfo.flag,
+            category: country.todayDeaths
+        }
+    }).sort((a, b) => b.category - a.category).slice(0,10);
+
+    const todayCritical = data?.map((country) => {
+        return {
+            name: country.country,
+            flag: country.countryInfo.flag,
+            category: country.critical
+        }
+    }).sort((a, b) => b.category - a.category).slice(0,10);
+
+    const topActive = data?.map((country) => {
+        return {
+            name: country.country,
+            flag: country.countryInfo.flag,
+            category: country.active
+        } 
+    }).sort((a, b) => b.category - a.category).slice(0,10);
+
+    const topRecovered = data?.map((country) => {
+        return {
+            name: country.country,
+            flag: country.countryInfo.flag,
+            category: country.recovered
+        }
+    }).sort((a, b) => b.category - a.category).slice(0,10);
 
 
     return (
-        <section>
-            <h1 className="text-[color:var(--col-dark-blue)] font-bold text-[1.5em]">Top Cases</h1>
-            <ul className="">
-                {tenTopCases.map((country, index) => (
-                    <InfoBadge country = {country} key = {index} />
-                ))}
-            </ul>
-            <h1 className="text-[color:var(--col-dark-blue)] font-bold text-[1.5em]">Today Cases</h1>
-            <ul className="">
-                {todayCases.map((country, index) => (
-                    <InfoBadge country = {country} key = {index} />
-                ))}
-            </ul>
-            <h1 className="text-[color:var(--col-dark-blue)] font-bold text-[1.5em]">Today Deaths</h1>
-            <ul className="">
-                {todayDeaths.map((country, index) => (
-                    <InfoBadge country = {country} key = {index} />
-                ))}
-            </ul>
-            <h1 className="text-[color:var(--col-dark-blue)] font-bold text-[1.5em]">Today Deaths</h1>
-            <ul className="">
-                {todayDeaths.map((country, index) => (
-                    <InfoBadge country = {country} key = {index} />
-                ))}
-            </ul>
-            
+        <section className="flex w-[100] justify-center bg-[color:var(--col-table3)]">
+            <ListTopCategories title="Top Cases" array={tenTopCases}/>
+            <ListTopCategories title="Today Cases" array={todayCases}/>
+            <ListTopCategories title="Today Deaths" array={todayDeaths}/>
+            <ListTopCategories title="Today Critical" array={todayCritical}/>
+            <ListTopCategories title="Top Active" array={topActive}/>
+            <ListTopCategories title="Top Recovered" array={topRecovered}/>
+
         </section>
         
     )
 }
 
 export default CategoryData;
-
-
-{/* Se tiene que importar el data 
-Se tiene que hacer un container dentro del cual se muestre data de país específico por categorías
-Se tiene que dividr en columnas por categorías
-
-*/}
