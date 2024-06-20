@@ -12,6 +12,7 @@ import Tracker8 from "@/pages/Tracker8";
 import { createBrowserRouter } from "react-router-dom";
 
 
+
 const router = createBrowserRouter ([
     {
         path:"/",
@@ -32,7 +33,7 @@ const router = createBrowserRouter ([
                 element: <Tracker1 />
             },
             {
-                path:"/tracker/2",
+                path:"/tracker/2/:page?",
                 element: <Tracker2 />
             },
             {
