@@ -1,9 +1,9 @@
-import AjaxTable from '@/components/ajaxTable/AjaxTable';
+import AjaxTable from '@/components/AjaxTable/AjaxTable';
 import WidgetHead from '@/components/widgets/WidgetHead';
 import WidgetBody from '@/components/widgets/WidgetBody';
-import SelectDataTable from '@/components/ajaxTable/SelectDataTable';
-import SearchInput from '@/components/ajaxTable/SearchInput';
-import TablePagination from '@/components/ajaxTable/TablePagination';
+import SelectDataTable from '@/components/AjaxTable/SelectDataTable';
+import SearchInput from '@/components/AjaxTable/SearchInput';
+import TablePagination from '@/components/AjaxTable/TablePagination';
 import useTracker from '@/hooks/useTracker';
 
 const Tracker2 = () => {
