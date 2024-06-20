@@ -29,6 +29,8 @@ const SelectCountry = ({ selectedCountry, setSelectedCountry, countries }) => {
         ))}
       </SelectContent>
     </Select>
+    <div className="inset-x-0 h-px bg-[color:var(--col-grey)] mt-4 px-4 "></div>
+
     </div>
   );
 };

@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: ["class"],
@@ -17,6 +18,7 @@ module.exports = {
       },
     },
     extend: {
+      
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -52,6 +54,16 @@ module.exports = {
           foreground: "hsl(var(--card-foreground))",
         },
       },
+      filter: {
+        'none': 'none',
+        'grayscale': 'grayscale(1)',
+        'invert': 'invert(1)',
+        'sepia': 'sepia(1)',
+        'opacity-20': 'opacity(0.2)',
+        'saturate-0': 'saturate(0)',
+        'brightness_75': 'brightness(75%)',
+
+      },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
@@ -75,3 +87,4 @@ module.exports = {
   },
   plugins: [require("tailwindcss-animate")],
 }
+
