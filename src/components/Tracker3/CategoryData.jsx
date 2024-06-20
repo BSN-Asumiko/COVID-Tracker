@@ -11,13 +11,17 @@ const CategoryData = () => {
 
     return (
         <section>
-            <h1>Top Countries</h1>
-            <ul className="w-1/5 p-12;">
+            <h1 className="text-[color:var(--col-dark-blue)] font-bold text-[1.5em]">Top Cases</h1>
+            <ul className="">
                 {tenTopCountries.map((country, index) => (
-                    <li key={index} className="grid grid-cols-[20%_auto] grid-rows-[50%_50%] bg-[--col-body];">
-                        <div><img src={country.countryInfo.flag} alt={`${country.country} flag`} className="w-[70%] row-[span_2] col-[span_1] rounded-[50%];"/></div>
-                        <p className="row-[span_1] text-base;">{country.country}</p>
-                        <h3 className="row-[span_1] text-[2rem];">{country.cases}</h3>
+                    <li key={index} className="flex bg-[color:var(--col-body)] items-center">
+                        <div className="bg-[color:var(--col-body)] shadow-[0_15px_30px_0_rgba(20,50,90,0.05)] m-2 p-1"><img src={country.countryInfo.flag} alt={`${country.country} flag`} className="w-[45px] h-[45px] object-cover rounded-[30px] "/>
+                        </div>
+                        <section>
+                            <p className="column-[span_1] text-base text-[color:var(--col-dark-blue)]">{country.country}</p>
+                            <h3 className="column-[span_1] text-[1.25rem] text-[color:var(--col-dark-blue)] font-bold">{country.cases}</h3>
+                        </section>
+                        
                         </li> 
                 )
                     
