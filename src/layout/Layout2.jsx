@@ -6,7 +6,7 @@ const Layout2 = () => {
         <>
         <Navbar />
         {/* Aside */}
-        <main className="bg-[color:var(--col-components-bg)]" >
+        <main >
             <Outlet />
         </main>
 
