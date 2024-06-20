@@ -19,14 +19,15 @@ const Tracker1 = () => {
         <div>Loading...</div>
       ) : (
         <>
-          <SelectCountry 
+          <SelectCountry
             selectedCountry={selectedCountry} 
             setSelectedCountry={setSelectedCountry} 
             countries={countries} 
           />
           <GlobalData data={data} />
-          <WorldWideData />
-
+{/*           <img src="\public\assets\images\tracker1.jpg" alt="" />
+ */}          <WorldWideData />
+          
         </>
       )}
     </div>
@@ -34,3 +35,4 @@ const Tracker1 = () => {
 }
 
 export default Tracker1;
+
