@@ -1,5 +1,6 @@
 import useApi from "@/services/useApi";
 import { URL_COUNTRIES } from "@/config/urls";
+ 
 
 const CategoryData = () => {
     const data = useApi(URL_COUNTRIES) || [];
@@ -11,11 +12,14 @@ const CategoryData = () => {
     return (
         <section>
             <h1>Top Countries</h1>
-            <ul>
-                {tenTopCountries.map((country, index) => {
-                    console.log(country.country)
-                  return (  <li key={index}>{country.country}:{country.cases}</li> )
-                }
+            <ul className="w-1/5 p-12;">
+                {tenTopCountries.map((country, index) => (
+                    <li key={index} className="grid grid-cols-[20%_auto] grid-rows-[50%_50%] bg-[--col-body];">
+                        <div><img src={country.countryInfo.flag} alt={`${country.country} flag`} className="w-[70%] row-[span_2] col-[span_1] rounded-[50%];"/></div>
+                        <p className="row-[span_1] text-base;">{country.country}</p>
+                        <h3 className="row-[span_1] text-[2rem];">{country.cases}</h3>
+                        </li> 
+                )
                     
                 )}
             </ul>
