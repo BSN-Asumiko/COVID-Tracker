@@ -3,7 +3,7 @@ import { useState } from 'react';
 import NavItem from "./NavItem";
 
 const Navbar = () => {
-    const [activeItem, setActiveItem] = useState(null);
+    const [activeItem, setActiveItem] = useState("/tracker");
 
     const handleItemClick = (to) => {
         setActiveItem(to);
@@ -11,7 +11,7 @@ const Navbar = () => {
 
     return (
         <nav>
-            <ul className="flex flex-col items-center w-20 leading-[1.75] border-r bg-[color:var(--col-body)]">
+            <ul className="flex flex-col items-center w-20 leading-[1.75] border-r bg-[color:var(--col-components-bg)]">
                 <li className="flex justify-center">
                     <NavLink to="/" className="flex items-center justify-center">
                         <img src="/assets/images/coronavirus.png" alt="Home" className="w-11 h-11 relative animate-[spin_4s_linear_infinite] m-3 mb-7" />
