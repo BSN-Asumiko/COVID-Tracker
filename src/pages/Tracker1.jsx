@@ -3,16 +3,18 @@ import useApi from "@/services/useApi";
 import SelectCountry from "@/components/selectCountry/SelectCountry";
 import GlobalData from "@/components/globalData/GlobalData";
 import WorldWideData from "@/components/worldWideData/WorldWideData";
+import { URL_COUNTRIES, URL_ALL } from "@/config/urls"
 
 const Tracker1 = () => {
   const [selectedCountry, setSelectedCountry] = useState("AF");
   const url =
     selectedCountry === "world"
-      ? "https://disease.sh/v3/covid-19/all"
-      : `https://disease.sh/v3/covid-19/countries/${selectedCountry}`;
+      ? URL_ALL
+      : `${URL_COUNTRIES}/${selectedCountry}`;
 
   const data = useApi(url);
-  const countries = useApi("https://disease.sh/v3/covid-19/countries");
+  const countries = useApi(URL_COUNTRIES);
+  console.log(countries)
 
   return (
     <div>
@@ -24,7 +26,7 @@ const Tracker1 = () => {
             selectedCountry={selectedCountry}
             setSelectedCountry={setSelectedCountry}
             countries={countries}
-          />
+          /> 
           <div className="grid grid-cols-2">
             <GlobalData data={data} />
             <img
