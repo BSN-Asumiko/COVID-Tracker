@@ -13,9 +13,9 @@ const Footer = () => {
                 </p>
                 <ul className="flex "> 
                     <IconItem icon="&#xf09a;" link="https://www.facebook.com/"/>
-                    <IconItem icon="&#xf099;" link="https://www.facebook.com/"/>
-                    <IconItem icon="&#xf0e1;" link="https://www.facebook.com/"/>
-                    <IconItem icon="&#xf167;" link="https://www.facebook.com/"/>
+                    <IconItem icon="&#xf099;" link="https://x.com/?lang=ca/"/>
+                    <IconItem icon="&#xf0e1;" link="https://www.linkedin.com/"/>
+                    <IconItem icon="&#xf167;" link="https://www.youtube.com/"/>
                 </ul>
             </div>
             <div className="w-[65%] flex justify-around">
