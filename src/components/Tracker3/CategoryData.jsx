@@ -4,7 +4,7 @@ import InfoBadge from "./InfoBadge";
 import ListTopCategories from "./ListTopCategories";
 import WidgetHead from "../widgets/WidgetHead";
 
- 
+
 
 const CategoryData = () => {
     const data = useApi(URL_COUNTRIES) || [];

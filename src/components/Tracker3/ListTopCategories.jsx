@@ -17,11 +17,3 @@ const ListTopCategories = ({title, array}) => {
 
 export default ListTopCategories
 
-/*<span className="flex flex-col ">
-<h1 className="text-[color:var(--col-dark-blue)] font-bold text-[1.5em]">Top Cases</h1>
-<ul className="">
-    {tenTopCases.map((country, index) => (
-        <InfoBadge country = {country} key = {index} />
-    ))}
-</ul>
-</span>*/
