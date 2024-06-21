@@ -10,7 +10,7 @@ const Layout2 = () => {
 
         <Navbar />
         <Aside />
-        <main>
+        <main className="h-screen bg-[color:var(--col-components-bg)]">
             <Outlet />
         </main>
 
