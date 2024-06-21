@@ -1,6 +1,12 @@
+import CategoryData from '@/components/Tracker3/CategoryData'
+import React from 'react'
+
+
 const Tracker3 = () => {
   return (
-    <div>Tracker3</div>
+    <>
+    <CategoryData />
+    </>
   )
 }
 
