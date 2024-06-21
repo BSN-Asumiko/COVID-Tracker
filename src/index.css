@@ -50,6 +50,12 @@
   --col-bg-table-accent: 235, 235, 247;
   --col-bg-table-accent-dark: 229, 230, 246;
 
+  --col-home-footer-text: rgb(54, 83, 151);
+  --col-home-footer: rgb(27,42,78);
+  --col-home-main: rgb(23,17,51);
+  --col-home-gradient-start: rgb(59,145,183); 
+  --col-home-gradient-end: rgb(24,17,82) 100%;
+
 }
 
 /* RESET */
@@ -78,6 +84,17 @@ body {
 
 .icon {
   font-family: 'Themify', sans-serif;
+}
+
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('/assets/fonts/fontawesome-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.icon-f {
+  font-family: 'FontAwesome', sans-serif;
 }
 
 
