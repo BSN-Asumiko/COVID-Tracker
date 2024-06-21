@@ -6,7 +6,7 @@ import Aside from "@/components/aside/Aside";
 
 const Layout2 = () => {
     return (
-        <>
+        <div className="flex h-screen w-screen">
 
         <Navbar />
         <Aside />
@@ -14,7 +14,7 @@ const Layout2 = () => {
             <Outlet />
         </main>
 
-        </>
+        </div>
     )
 }
 
