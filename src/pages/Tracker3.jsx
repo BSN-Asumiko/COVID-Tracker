@@ -10,4 +10,4 @@ const Tracker3 = () => {
   )
 }
 
-export default Tracker3
+export default Tracker3;
