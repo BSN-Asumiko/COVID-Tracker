@@ -61,7 +61,7 @@ const CategoryData = () => {
 
 
     return (
-        <section className="flex flex-col w-screen bg-[color:var(--col-table3)]">
+        <section className="flex flex-col w-[100] bg-[color:var(--col-table3)]">
             <WidgetHead text="Top 10 Countries wise Covid-19 Updates - Tiles" />
             <section className="flex flex-row ml-5">
                 <ListTopCategories title="Top Cases" array={tenTopCases}/>
