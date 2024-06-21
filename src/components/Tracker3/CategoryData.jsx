@@ -63,7 +63,7 @@ const CategoryData = () => {
         <section className="flex flex-col w-[100] bg-[color:var(--col-table3)]">
             <h1 className="text-[1.2rem] text-[color:var(--col-dark-blue)] font-bold text-left ml-7 mt-4">Top 10 Countries wise Covid-19 Updates - Tiles</h1>
 
-            <section className="flex flex-row justify-left ml-5">
+            <section className="flex flex-row ml-5">
                 <ListTopCategories title="Top Cases" array={tenTopCases}/>
                 <ListTopCategories title="Today Cases" array={todayCases}/>
                 <ListTopCategories title="Today Deaths" array={todayDeaths}/>
