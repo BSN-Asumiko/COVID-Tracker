@@ -1,10 +1,10 @@
-import Faq from "@/components/faq/faqsection/Faq"
+import Faq from "@/components/homePageComponents/faq/faqsection/Faq"
 
 const Home = () => {
     return (
         <>
-            <main>
-                
+            <main className="w-[100%] bg-[color:var(--col-home-main)]">
+                <Faq/>
             </main>
         </>
     )
