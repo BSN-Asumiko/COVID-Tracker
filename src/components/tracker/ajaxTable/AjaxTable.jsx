@@ -11,7 +11,7 @@ import {
 
 const AjaxTable = ({ tableHeads, displayedData, handleSort, sortConfig }) => {
     return (
-        <Table className="text-base text-[color:var(--col-dark-blue)] border-b-[#ccc] border-b border-solid">
+        <Table className="text-base text-[color:var(--col-dark-blue)] border-b-[#ccc] border-b border-solid overflow-h-auto h-[60%]">
             <TableHeader>
                 <TableRow>
                     {

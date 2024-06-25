@@ -1,3 +1,7 @@
+/* eslint-disable react/prop-types */
+import PropTypes from "prop-types"
+
+
 const TotalListItem = ({text, today, cases, className, casesStyle}) => {
     return (
         <>
@@ -10,6 +14,16 @@ const TotalListItem = ({text, today, cases, className, casesStyle}) => {
             </li>
         </>
     )
+}
+
+
+TotalListItem.prototype = {
+    text: PropTypes.string.isRequired,
+    today: PropTypes.string,
+    cases: PropTypes.string,
+    className: PropTypes.string,
+    casesStyle: PropTypes.string,
+
 }
 
 export default TotalListItem

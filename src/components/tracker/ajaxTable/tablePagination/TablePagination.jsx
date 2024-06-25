@@ -35,7 +35,7 @@ const TablePagination = ({ totalPages, currentPage }) => {
     const paginationItems = getPagination();
 
     return (
-        <Pagination className="w-auto justify-end mx-2s">
+        <Pagination className="w-auto justify-end mx-1">
             <PaginationContent>
                 <PaginationItem>
                     <PaginationPrevious
