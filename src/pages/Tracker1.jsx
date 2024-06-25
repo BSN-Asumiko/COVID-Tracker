@@ -1,8 +1,8 @@
 import { useState } from "react";
 import useApi from "@/services/useApi";
-import SelectCountry from "@/components/selectCountry/SelectCountry";
-import GlobalData from "@/components/globalData/GlobalData";
-import WorldWideData from "@/components/worldWideData/WorldWideData";
+import SelectCountry from "@/components/tracker/globalData/selectCountry/SelectCountry";
+import GlobalData from "@/components/tracker/globalData/GlobalData";
+import WorldWideData from "@/components/tracker/worldWideData/WorldWideData";
 import { URL_COUNTRIES, URL_ALL } from "@/config/urls"
 
 const Tracker1 = () => {
@@ -14,7 +14,6 @@ const Tracker1 = () => {
 
   const data = useApi(url);
   const countries = useApi(URL_COUNTRIES);
-  console.log(countries)
 
   return (
     <div>
