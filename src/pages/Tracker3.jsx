@@ -1,5 +1,5 @@
-import CategoryData from '@/components/Tracker3/CategoryData'
-import React from 'react'
+import CategoryData from '@/components/tracker/categoryData/CategoryData';
+
 
 
 const Tracker3 = () => {
