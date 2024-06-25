@@ -1,5 +1,4 @@
 /* eslint-disable react/prop-types */
-import PropTypes from 'prop-types';
 
 const TopCountriesItem = ({object}) => {
     return (
@@ -18,12 +17,5 @@ const TopCountriesItem = ({object}) => {
     )
 }
 
-TopCountriesItem.prototypes = {
-    object: PropTypes.object.isRequired,
-}
-
-TopCountriesItem.defaultProps = {
-    object: {}
-}
 
 export default TopCountriesItem
