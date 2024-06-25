@@ -12,7 +12,7 @@ const Aside = () => {
     let top10Countries = dataCountries.sort((a, b) => b.deaths - a.deaths).slice(0, 10); 
 
     return (
-        <div className="w-[30%] h-[100vh] p-[1em] overflow-hidden">
+        <div className="w-[30%] h-screen p-[1em] overflow-hidden">
             <div className="overflow-y-auto h-[100%] w-[100%] no-scrollbar">
                 <h1 className="text-[1.5em] text-[color:var(--col-black)] font-semibold">COVID-19 Tracker</h1>
                 <ul>
@@ -44,7 +44,7 @@ const Aside = () => {
                     className="bg-[color:var(--col-aside-bg-dc)] hover:border hover:border-[color:var(--col-common-blue)] hover:border-solid"
                     casesStyle="text-[color:var(--col-common-blue)]"/>
                 </ul>
-                <h6 className="text-[color:var(--col-dark-blue)] text-[1.1em] font-semibold mt-[0.5em]">Top 10 Country</h6>
+                <h6 className="text-[color:var(--col-dark-blue)] text-[1.1em] font-semibold m-auto mt-[1em] w-[95%] ">Top 10 Country</h6>
                 <ul>
                     {top10Countries.map((object, index) => (
                         <TopCountriesItem object={object} key={index} />

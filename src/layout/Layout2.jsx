@@ -6,15 +6,15 @@ import Aside from "@/components/aside/Aside";
 
 const Layout2 = () => {
     return (
-        <>
+        <div className="flex h-screen w-screen">
 
         <Navbar />
         <Aside />
-        <main>
+        <main className="h-screen bg-[color:var(--col-components-bg)]">
             <Outlet />
         </main>
 
-        </>
+        </div>
     )
 }
 
