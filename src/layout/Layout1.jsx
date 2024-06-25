@@ -7,7 +7,7 @@ const Layout1 = () => {
     return (
         <>
             <Navbar />
-            <main>
+            <main className="h-auto">
                 <Outlet /> 
             </main>
             <Footer />
