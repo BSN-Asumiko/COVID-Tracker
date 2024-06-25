@@ -3,13 +3,11 @@ import { Outlet } from "react-router-dom"
 
 const Layout1 = () => {
     return (
-        <>
-        <main>
+        <div className="w-full h-screen bg-[color:var(--col-bg-home)]">
+        <main >
             <Outlet /> 
         </main>
-
-
-        </>
+        </div>
     )
 }
 

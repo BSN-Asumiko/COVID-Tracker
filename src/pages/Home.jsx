@@ -1,8 +1,11 @@
+import Faq from "@/components/section4/Faq"
 
 const Home = () => {
     return (
-        <div>Home</div>
+        <div>
+            <Faq />
+        </div >
     )
 }
 
-export default Home
+export default Home;
