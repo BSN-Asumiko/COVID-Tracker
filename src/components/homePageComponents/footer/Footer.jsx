@@ -5,7 +5,7 @@ import IconItem from "./IconItem";
 
 const Footer = () => {
     return (
-        <footer className="w-screen bottom-0 absolute flex bg-[color:var(--col-home-footer)] 
+        <footer className="w-screen bottom-0 flex bg-[color:var(--col-home-footer)] 
         text-[color:var(--col-body)] py-[3.5em]">
             <div className="w-[32%] pl-[7cqw] mr-[3em]">
                 <img src="/assets/images/logo-white.png" alt="Covimap logo" />

@@ -1,6 +1,5 @@
 import useApi from "@/services/useApi";
 import { URL_COUNTRIES } from "@/config/urls";
-import InfoBadge from "./InfoBadge";
 import ListTopCategories from "./ListTopCategories";
 import WidgetHead from "../widgets/WidgetHead";
 
