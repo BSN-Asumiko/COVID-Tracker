@@ -1,10 +1,10 @@
-import Accordion from "./Accordion";
+import Accordion from "../accordion/Accordion";
 
 const Faq = () => {
     return (
         <section className="flex flex-col p-6 justify-center gap-5">
             <div className="text-center w-[300px] m-auto">
-                <p className=" text-[small] text-[color:var(--col-body)]">Faqs</p>
+                <p className=" text-[small] text-[color:var(--col-body)] opacity-80">Faqs</p>
                 <h1 className=" text-[xx-large] font-bold text-[color:var(--col-body)] leading-[40px]">Frequently Asked Questions</h1>
             </div>
             <div className="m-auto w-[50%] bg-[color:var(--col-bg-regal-blue)] rounded-lg pt-3 ">
