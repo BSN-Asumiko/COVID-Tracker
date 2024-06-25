@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 const TopCountriesItem = ({object}) => {
     return (
         <>
@@ -15,4 +16,4 @@ const TopCountriesItem = ({object}) => {
     )
 }
 
-export default TopCountriesItem
+export default TopCountriesItem;
