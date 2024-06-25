@@ -49,6 +49,8 @@
   --col-bg-table-odd: 248, 249, 254;
   --col-bg-table-accent: 235, 235, 247;
   --col-bg-table-accent-dark: 229, 230, 246;
+  --col-bg-regal-blue: rgb(27, 42, 78);
+  --col-bg-home: rgb(23, 17, 51);
 
   --col-home-footer-text: rgb(54, 83, 151);
   --col-home-footer: rgb(27,42,78);
@@ -72,7 +74,7 @@
 
 body {
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 
@@ -99,6 +101,8 @@ body {
 .icon-f {
   font-family: 'FontAwesome', sans-serif;
 }
+
+
 
 
 /* UTILITY CLASSES */
