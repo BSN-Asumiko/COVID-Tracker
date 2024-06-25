@@ -1,6 +1,6 @@
 
-import FooterColumns from "./FooterColumns";
-import IconItem from "./IconItem";
+import FooterColumns from "./footerColumns/FooterColumns";
+import IconItem from "./iconItem/IconItem";
 
 
 const Footer = () => {

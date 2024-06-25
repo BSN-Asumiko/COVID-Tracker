@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 
-import WidgetBody from "../widgets/WidgetBody";
-import WidgetHead from "../widgets/WidgetHead";
+import WidgetBody from "../widgetBody/WidgetBody";
+import WidgetHead from "../widgetHead/WidgetHead";
 import { PureComponent } from 'react';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 

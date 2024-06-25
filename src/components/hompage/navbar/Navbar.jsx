@@ -1,4 +1,6 @@
+/* eslint-disable react/prop-types */
 import { NavLink } from "react-router-dom"
+import NavItem from "./navItem/navItem"
 
 const Navbar = () => {
     return (
@@ -21,13 +23,7 @@ const Navbar = () => {
 }
 
 
-const NavItem = ({content, icon}) => {
-    return (
-        <>
-            <li className="text-[color:var(--col-dark-blue)] hover:cursor-pointer">{content} <span className="icon-f">{icon}</span></li>
-        </>
-    )
-}
+
 
 
 export default Navbar

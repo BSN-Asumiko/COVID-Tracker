@@ -1,5 +1,6 @@
+/* eslint-disable react/prop-types */
 import { NavLink } from 'react-router-dom';
-import PropTypes from 'prop-types';
+
 
 const NavItem = ({ icon, to, isActive, withCircleOrange, withCircleRed, onClick }) => {
     return (
@@ -19,18 +20,5 @@ const NavItem = ({ icon, to, isActive, withCircleOrange, withCircleRed, onClick 
     );
 };
 
-NavItem.propTypes = {
-    icon: PropTypes.node.isRequired,
-    to: PropTypes.string.isRequired,
-    isActive: PropTypes.bool,
-    withCircleOrange: PropTypes.bool,
-    withCircleRed: PropTypes.bool,
-    onClick: PropTypes.func.isRequired,
-};
 
-NavItem.defaultProps = {
-    isActive: false,
-    withCircleOrange: false,
-    withCircleRed: false,
-};
 export default NavItem;

@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import links from "@/utils/footerLinksData"
 
 const FooterColumns = () => {

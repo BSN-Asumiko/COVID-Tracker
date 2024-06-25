@@ -1,7 +1,7 @@
 import useApi from "@/services/useApi";
 import { URL_COUNTRIES } from "@/config/urls";
 import ListTopCategories from "./listTopCategories/ListTopCategories";
-import WidgetHead from "../widgetHead/widgetHead/WidgetHead";
+import WidgetHead from "../widgetHead/WidgetHead";
 
 
 const CategoryData = () => {

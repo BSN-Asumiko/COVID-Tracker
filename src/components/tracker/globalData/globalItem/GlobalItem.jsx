@@ -1,5 +1,4 @@
-import PropTypes from 'prop-types';
-
+/* eslint-disable react/prop-types */
 const GlobalItem = ({ title, value, imgSrc, valueClassName }) => {
   return (
     <li className="relative m-4 bg-[color:var(--col-body)] overflow-hidden transform transition duration-500 hover:scale-110">
@@ -17,11 +16,6 @@ const GlobalItem = ({ title, value, imgSrc, valueClassName }) => {
   );
 };
 
-GlobalItem.propTypes = {
-  title: PropTypes.string.isRequired,
-  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
-  imgSrc: PropTypes.string.isRequired,
-  valueClassName: PropTypes.string,
-};
+
 
 export default GlobalItem;

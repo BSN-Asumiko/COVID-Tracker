@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 const IconItem = ({link, icon}) => {
     return (
         <li className="mr-[0.8em]">

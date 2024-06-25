@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import GlobalItem from './GlobalItem';
+import GlobalItem from './globalItem/GlobalItem';
 
 const GlobalData = ({ data }) => {
   // Si data es un array, tomamos el primer elemento (asumiendo que es el objeto que necesitamos)

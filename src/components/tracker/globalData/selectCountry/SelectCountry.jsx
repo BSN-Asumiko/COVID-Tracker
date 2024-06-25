@@ -1,4 +1,5 @@
-import PropTypes from 'prop-types';
+/* eslint-disable react/prop-types */
+
 import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from "@/components/ui/select";
 
 const SelectCountry = ({ selectedCountry, setSelectedCountry, countries }) => {
@@ -32,15 +33,6 @@ const SelectCountry = ({ selectedCountry, setSelectedCountry, countries }) => {
   );
 };
 
-SelectCountry.propTypes = {
-  selectedCountry: PropTypes.string,
-  setSelectedCountry: PropTypes.func.isRequired,
-  countries: PropTypes.arrayOf(PropTypes.shape({
-    country: PropTypes.string.isRequired,
-    countryInfo: PropTypes.shape({
-      iso3: PropTypes.string, 
-    })
-  })).isRequired,
-};
+
 
 export default SelectCountry;

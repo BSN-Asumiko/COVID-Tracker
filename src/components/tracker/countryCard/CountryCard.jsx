@@ -1,5 +1,5 @@
 // eslint-disable-next-line react/prop-types
-const WorldItem = ({ title, value, imageSrc }) => {
+const CountryCard = ({ title, value, imageSrc }) => {
   return (
     <li className="bg-[color:var(--col-body)] p-4 text-[color:var(--col-dark-blue)]">
       <div className="flex text-xl">
@@ -13,4 +13,4 @@ const WorldItem = ({ title, value, imageSrc }) => {
   );
 };
 
-export default WorldItem;
+export default CountryCard;
