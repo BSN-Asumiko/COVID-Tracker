@@ -1,12 +1,16 @@
-import { Outlet } from "react-router-dom"
+import { Outlet } from "react-router-dom";
+import Navbar from "@/components/homePageComponents/navbar/Navbar";
+import Footer from "@/components/homePageComponents/footer/Footer";
 
 
 const Layout1 = () => {
     return (
         <>
-        <main>
-            <Outlet /> 
-        </main>
+            <Navbar />
+            <main>
+                <Outlet /> 
+            </main>
+            <Footer />
 
 
         </>
