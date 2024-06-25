@@ -44,7 +44,7 @@ const Aside = () => {
                     className="bg-[color:var(--col-aside-bg-dc)] hover:border hover:border-[color:var(--col-common-blue)] hover:border-solid"
                     casesStyle="text-[color:var(--col-common-blue)]"/>
                 </ul>
-                <h6 className="text-[color:var(--col-dark-blue)] text-[1.1em] font-semibold mt-[0.5em]">Top 10 Country</h6>
+                <h6 className="text-[color:var(--col-dark-blue)] text-[1.1em] font-semibold m-auto mt-[1em] w-[95%] ">Top 10 Country</h6>
                 <ul>
                     {top10Countries.map((object, index) => (
                         <TopCountriesItem object={object} key={index} />
