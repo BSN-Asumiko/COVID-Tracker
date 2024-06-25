@@ -55,6 +55,9 @@
   --col-home-main: rgb(23,17,51);
   --col-home-gradient-start: rgb(59,145,183); 
   --col-home-gradient-end: rgb(24,17,82) 100%;
+  --col-home-arrow-btn: rgb(254, 101, 80);
+  --col-home-contact-btn: rgb(47, 210, 194);
+  --col-home-cart-btn: rgb(156, 203, 109);
 
 }
 
