@@ -1,6 +1,6 @@
 import useApi from "@/services/useApi";
 import { URL_ALL } from "@/config/urls";
-import CountryCard from "../countryCard/CountryCard";
+import WorldWideItem from "../worldWideItem/WorldWideItem";
 
 const WorldWideData = () => {
     const url = URL_ALL;
@@ -10,32 +10,32 @@ const WorldWideData = () => {
 
     return (
         <div className="w-full p-4">
-            <ul className="grid grid-cols-5 space-x-1 w-full justify-center">
-                <CountryCard
+            <ul className="grid grid-cols-2 ml:grid-cols-5 gap-1 justify-center @container">
+                <WorldWideItem
                     title="Total Confirmed:"
                     value={worldData.cases}
                     imageSrc="\public\assets\images\icons\covid-defult.svg"
                     key="total-confirmed"
                 />
-                <CountryCard
+                <WorldWideItem
                     title="Total Recovered:"
                     value={worldData.recovered}
                     imageSrc="\public\assets\images\icons\covid-green.svg"
                     key="total-recovered"
                 />
-                <CountryCard
+                <WorldWideItem
                     title="Total Deaths:"
                     value={worldData.deaths}
                     imageSrc="\public\assets\images\icons\covid-orange.svg"
                     key="total-deaths"
                 />
-                <CountryCard
+                <WorldWideItem
                     title="New Deaths:"
                     value={worldData.todayDeaths}
                     imageSrc="\public\assets\images\icons\covid-red.svg"
                     key="new-deaths"
                 />
-                <CountryCard
+                <WorldWideItem
                     title="Help Line No."
                     value={198}
                     imageSrc="\public\assets\images\icons\telephone.svg"
