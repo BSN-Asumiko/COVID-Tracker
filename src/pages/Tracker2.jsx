@@ -5,6 +5,7 @@ import SelectDataTable from '@/components/tracker/ajaxTable/selectDataTable/Sele
 import SearchInput from '@/components/tracker/ajaxTable/searchInput/SearchInput';
 import TablePagination from '@/components/tracker/ajaxTable/tablePagination/TablePagination';
 import useTracker from '@/hooks/useTracker';
+import Loader from '@/components/tracker/loader/Loader';
 
 const Tracker2 = () => {
   const {
@@ -19,6 +20,8 @@ const Tracker2 = () => {
     itemsToShow,
     currentPage,
     totalPages,
+    loading,
+    error
   } = useTracker();
 
 
@@ -26,6 +29,11 @@ const Tracker2 = () => {
   return (
     <div className="w-[90%]">
       <WidgetHead text="Ajax Data Table - COVID 19 Country Wise State" className="bg-[color:var(--col-body)]" />
+      { loading ? 
+      <Loader /> 
+      : error ? 
+      ( <div> There was an error loading </div>) 
+      :
       <WidgetBody className="flex flex-col max-h-[80vh]" >
         <div className="flex justify-between mb-3">
           <SelectDataTable onSelectChange={handleSelectChange} />
@@ -49,6 +57,7 @@ const Tracker2 = () => {
           />
         </div>
       </WidgetBody>
+      } 
     </div>
   );
 };

@@ -7,7 +7,7 @@ import TopCountriesItem from "./topCountriesItem/TopCountriesItem";
 
 const Aside = () => {
 
-    const dataGeneral = useApi(URL_ALL);
+    const {dataGeneral} = useApi(URL_ALL);
     let dataCountries = useApi(URL_COUNTRIES);
     let top10Countries = dataCountries.sort((a, b) => b.deaths - a.deaths).slice(0, 10); 
 
