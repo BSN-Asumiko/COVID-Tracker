@@ -26,7 +26,7 @@ const Tracker1 = () => {
             setSelectedCountry={setSelectedCountry}
             countries={countries}
           /> 
-          <div className="grid grid-cols-2">
+          <div className="grid grid-cols-1 lg:grid-cols-2">
             <GlobalData data={data} />
             <img
               src="/assets/images/image.png"
