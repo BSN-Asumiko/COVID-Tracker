@@ -1,5 +1,5 @@
-import Faq from "@/components/homePageComponents/faq/faqsection/Faq"
-import AppStatistics from "@/components/homePageComponents/appStatistics/appStatisticsMain/AppStatistics";
+import Faq from "@/components/hompage/faq/faqsection/Faq";
+import AppStatistics from "@/components/hompage/appStatistics/appStatisticsMain/AppStatistics";
 
 const Home = () => {
     return (
