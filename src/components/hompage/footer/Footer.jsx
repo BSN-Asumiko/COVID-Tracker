@@ -7,7 +7,7 @@ const Footer = () => {
     return (
         <footer className="w-screen bottom-0 flex bg-[color:var(--col-home-footer)] 
         text-[color:var(--col-body)] py-[3.5em]">
-            <div className="w-[32%] pl-[7cqw] mr-[3em]">
+            <div className="w-[32%] pl-[7cqw] mr-[3em] mt-3">
                 <img src="/assets/images/logo-white.png" alt="Covimap logo" />
                 <p className="my-[1.8em] text-[0.8em] opacity-[50%] font-extralight tracking-[0.04em]  leading-[2em]">These droplets can land on objects and surfaces around the person such as tables, doorknobs and handrails.
                 </p>
