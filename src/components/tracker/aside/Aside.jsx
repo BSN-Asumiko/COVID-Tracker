@@ -12,8 +12,8 @@ const Aside = () => {
     let top10Countries = dataCountries.sort((a, b) => b.deaths - a.deaths).slice(0, 10); 
 
     return (
-        <div className="hidden md:block w-[30%] h-screen p-[1em] overflow-hidden">
-            <div className="overflow-y-auto h-[100%] w-[100%] no-scrollbar">
+        <div className="hidden ml:block w-[30%] h-screen p-[1em] overflow-hidden">
+            <div className="overflow-y-auto h-[100%] w-[100%] no-scrollbar @container">
                 <h1 className="text-[1.5em] text-[color:var(--col-black)] font-semibold">COVID-19 Tracker</h1>
                 <ul>
                     <TotalListItem 

@@ -85,7 +85,12 @@ module.exports = {
       },
       containers: {
         '2xs': '14.25em',
+        '3xs': '7rem',
       },
+
+      screens: {
+        'ml': '900px'
+      }
     },
   },
   plugins: [require("tailwindcss-animate"), 

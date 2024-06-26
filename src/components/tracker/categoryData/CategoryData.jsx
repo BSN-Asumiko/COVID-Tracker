@@ -59,18 +59,18 @@ const CategoryData = () => {
 
 
     return (
-        <>
+        <section>
             <WidgetHead text="Top 10 Countries wise Covid-19 Updates - Tiles" />
-            <section className="flex flex-row ml-5">
+            <div className="flex flex-row flex-wrap justify-evenly">
                 <ListTopCategories title="Top Cases" array={tenTopCases} />
                 <ListTopCategories title="Today Cases" array={todayCases} />
                 <ListTopCategories title="Today Deaths" array={todayDeaths} />
                 <ListTopCategories title="Today Critical" array={todayCritical} />
                 <ListTopCategories title="Top Active" array={topActive} />
                 <ListTopCategories title="Top Recovered" array={topRecovered} />
-            </section>
+            </div>
 
-        </>
+        </section>
 
     )
 }
