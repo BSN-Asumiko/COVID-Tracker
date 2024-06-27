@@ -1,5 +1,6 @@
 import Faq from "@/components/hompage/faq/faqsection/Faq";
 import AppStatistics from "@/components/hompage/appStatistics/appStatisticsMain/AppStatistics";
+import GetApp from "@/components/hompage/getApp/GetApp";
 import HeroSection from "@/components/hompage/heroSection/HeroSection";
 import IconBar from "@/components/hompage/iconBar/IconBar";
 
@@ -13,6 +14,7 @@ const Home = () => {
                 </div>
                 <AppStatistics />
                 <Faq/>
+                <GetApp />
             </main>
         </>
     )
