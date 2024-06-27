@@ -3,6 +3,7 @@ import AppStatistics from "@/components/hompage/appStatistics/appStatisticsMain/
 import GetApp from "@/components/hompage/getApp/GetApp";
 import HeroSection from "@/components/hompage/heroSection/HeroSection";
 import IconBar from "@/components/hompage/iconBar/IconBar";
+import ArticlesSection from "@/components/hompage/articles/articlesSection/ArticlesSection";
 
 const Home = () => {
     return (
@@ -15,6 +16,7 @@ const Home = () => {
                 <AppStatistics />
                 <Faq/>
                 <GetApp />
+                <ArticlesSection />
             </main>
         </>
     )
