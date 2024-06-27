@@ -4,7 +4,7 @@ const ArticlesSection = () => {
 
     return (
         <section className="m-auto w-[60%]">
-            <ArticlesList />
+            <ArticlesList className="flex flex-col gap-[1em] pb-6" />
         </section>
     )
 }
