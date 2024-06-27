@@ -15,7 +15,6 @@ const useApi = (url) => {
                     throw new Error(`Error ${response.status}`);
                 }
                 const jsonData = await response.json();
-                console.log("I am in useApi", jsonData)
                 setData(jsonData);
             } catch (error) {
                 setError(error.message);

@@ -1,22 +1,26 @@
-export const transformData = (data)  => {
-    let result = [];
-    let dates = new Set();
-
-
-    for (let category in data) {
-        for (let date in data[category]) {
-            dates.add(date);
-        }
-    }
-
-
-    dates.forEach(date => {
-        let entry = { date: date };
-        for (let category in data) {
-            entry[category] = data[category][date] || null; 
-        }
-        result.push(entry);
+export function getTopCountriesByCases(data, topN) {
+    const sortedData = data.sort((a, b) => {
+        const aCases = Object.values(a.timeline.cases);
+        const bCases = Object.values(b.timeline.cases);
+        return bCases[bCases.length - 1] - aCases[aCases.length - 1];
     });
 
-    return result;
+    return sortedData.slice(0, topN);
+}
+
+export function transformDataForChart(country) {
+    console.log(country)
+    let dates = Object.keys(country.timeline.cases).sort((a, b) => new Date(a) - new Date(b)) || [];
+
+    let casesData = [];
+    let deathsData = [];
+    let recoveredData = [];
+
+    dates.forEach(date => {
+        casesData.push({ date: date, value: country.timeline.cases[date] });
+        deathsData.push({ date: date, value: country.timeline.deaths[date] });
+        recoveredData.push({ date: date, value: country.timeline.recovered[date] });
+    });
+
+    return { dates, casesData, deathsData, recoveredData };
 }

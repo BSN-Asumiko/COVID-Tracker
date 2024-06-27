@@ -1,17 +1,26 @@
 import { URL_HISTORY } from "@/config/urls";
-import { transformData } from "@/utils/transformData";
+import { getTopCountriesByCases } from "@/utils/transformData";
+
 import useApi from "@/services/useApi";
+import LinearGrafic from "@/components/tracker/linearGrafic/LinearGrafic";
+import Loader from "@/components/tracker/loader/Loader";
+import Error from "@/components/tracker/error/Error";
 
 
 const Tracker6 = () => {
 
-  const { data } = useApi(URL_HISTORY);
-  console.log(data);
-  let transformedData = transformData(data);
-  console.log(transformedData);
-  // let displayData = transformData.sort((a, b) => b.deaths - a.deaths).slice(0, 10); 
+  const { data, loading, error } = useApi(URL_HISTORY);
+
+  const topCountries = getTopCountriesByCases(data, 6);
+
+
   return (
-    <div>Tracker6</div>
+      loading ? 
+      <Loader />
+      : error ?
+      <Error />
+      : 
+      <LinearGrafic country={topCountries[0]}/>
   )
 }
 
