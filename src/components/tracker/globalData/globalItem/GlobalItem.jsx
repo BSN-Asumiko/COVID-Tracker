@@ -7,7 +7,7 @@ const GlobalItem = ({ title, value, imgSrc, valueClassName }) => {
         <div className="relative w-full mt-4">
           <div className="absolute -left-6 -right-6 h-px bg-[color:var(--col-grey)] opacity-70"></div>
         </div>
-        <p className={`font-semibold ${valueClassName} mt-4 text-2xl lg:text-4xl`}>{value}</p>
+        <p className={`font-semibold ${valueClassName} mt-4 text-2xl @2xs:text-4xl`}>{value}</p>
       </div>
       <div className="w-[150px] h-[150px] absolute right-[-30px] top-[-30px] leading-[60px] opacity-10">
         <img src={imgSrc} alt="#" className="w-full group-hover:animate-spin-slow" />
