@@ -4,9 +4,11 @@ import GlobalItem from '@/components/tracker/globalData/globalItem/GlobalItem';
 import useApi from '@/services/useApi';
 import { URL_COUNTRIES } from '@/config/urls';
 import ButtonBadge from '@/components/buttonBadge/ButtonBadge';
+import Loader from '@/components/tracker/loader/Loader';
+import Error from '@/components/tracker/error/Error';
 
 const Tracker4 = () => {
-  const data = useApi(URL_COUNTRIES);
+  const {data, loading, error} = useApi(URL_COUNTRIES);
   const displayData = data.sort((a, b) => b.deaths - a.deaths).slice(0, 9);
 
   const [selectedCountry, setSelectedCountry] = useState("");
@@ -24,13 +26,15 @@ const Tracker4 = () => {
     }
   }, [displayData, selectedCountry]);
 
-  if (!data.length) {
-    return <div>Loading...</div>;
-  }
-
   return (
     <section className='flex flex-col justify-start'>
         <WidgetHead className="mx-2 lg:mx-4" text="Covid-19 Country Wise - Tabs" />
+        {loading?
+        <Loader />
+        :error?
+        <Error />
+        :
+        (<>
       <div className="">
         <ul className="flex flex-wrap mx-2 mt-3 mb-4 lg:mx-4 sm:justify-start">
           {displayData.map((item, index) => (
@@ -47,6 +51,7 @@ const Tracker4 = () => {
         <GlobalItem title="New Cases" value={countryData?.todayCases} imgSrc="/assets/images/icons/covid-orange.svg" valueClassName="text-[color:var(--col-orange)]" />
         <GlobalItem title="New Deaths" value={countryData?.todayDeaths} imgSrc="/assets/images/icons/covid-redark.svg" valueClassName="text-[color:var(--col-wine)]" />
       </div>
+      </>)}
     </section>
   );
 };
