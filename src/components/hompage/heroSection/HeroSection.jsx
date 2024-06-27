@@ -25,7 +25,7 @@ const HeroSection = () => {
             </NavLink>
             </div>
         </div>
-        <div className="w-[40%]">
+        <div className="w-[40%] mb-[7em]">
             <img src="../assets/images/phones.png" alt="Image girl with Covid at a cellphone" className="w-[60%] h-auto " />
         </div>
     </section >

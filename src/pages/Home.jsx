@@ -1,6 +1,6 @@
 
 
-import CarouselSection from "@/components/homePageComponents/carousel/CarouselSection";
+import CarouselSection from "@/components/hompage/carousel/CarouselSection";
 import Faq from "@/components/hompage/faq/faqsection/Faq";
 import AppStatistics from "@/components/hompage/appStatistics/appStatisticsMain/AppStatistics";
 import GetApp from "@/components/hompage/getApp/GetApp";
