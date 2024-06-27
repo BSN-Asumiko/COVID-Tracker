@@ -10,7 +10,7 @@ const CarouselComponent = () => {
                 align: "start",
                 loop: true,
                 }}>
-                <CarouselContent className="w-full flex gap-6">
+                <CarouselContent className="w-full flex gap-5 h-[20em]">
                 {carouselData.map((object, index) => (
                             <CarouselItem key={index} className="flex-shrink-0 lg:basis-1/4 md:basis-1/3 sm:basis-1/2 basis-full">
                                 <CarouselCard icon={object.icon} title={object.title} text={object.text} color={object.color}/>
