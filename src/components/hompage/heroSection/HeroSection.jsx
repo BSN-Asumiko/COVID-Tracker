@@ -3,17 +3,17 @@
 const HeroSection = () => {
   return (
 
-    <div className="w-screen bg-gradient-to-b from-[color:var(--col-home-gradient-start)] to-[color:var(--col-home-gradient-end)] p-6 pt-[10%] pb-16 h-[90%]">  
+    <div className="w-screen bg-gradient-to-b from-[color:var(--col-home-gradient-start)] to-[color:var(--col-home-gradient-end)] px-6 pt-[3em] h-[90%]">  
     <section className=" flex flex-row justify-center align-items-center p-4">
-        <div className="flex flex-col justify-end w-[5%]">
+        <div className="flex flex-col justify-end gap-[0.5em] w-[5%]">
             <div className=" flex justify-center items-center rounded-[50%] size-[3em] bg-[color:var(--col-home-arrow-btn)] mt-1">
-            <p className="icon-f text-white p-1" >&#xF064;</p>
+            <p className="icon-f text-white p-1 text-[large]" >&#xF064;</p>
             </div>
             <div className=" flex justify-center items-center rounded-[50%] size-[3em] bg-[color:var(--col-home-contact-btn)] mt-1">
-            <span className="icon  text-white  p-1" >&#xE719;</span>
+            <span className="icon  text-white  p-1 text-[large]" >&#xE719;</span>
             </div>
             <div className=" flex justify-center items-center rounded-[50%] size-[3em] bg-[color:var(--col-home-cart-btn)] mt-1">
-            <span className="icon  text-white  p-1" >&#xE60D;</span>
+            <span className="icon  text-white  p-1 text-[large]" >&#xE60D;</span>
             </div>
         </div>
         <div className="m-auto w-[55%] mr-6 ml-9 flex flex-col justify-start items-center pb-[10%]">
@@ -25,7 +25,7 @@ const HeroSection = () => {
             </NavLink>
             </div>
         </div>
-        <div className="w-[40%] pb-[10%]">
+        <div className="w-[40%] mb-[7em]">
             <img src="../assets/images/phones.png" alt="Image girl with Covid at a cellphone" className="w-[60%] h-auto " />
         </div>
     </section >
