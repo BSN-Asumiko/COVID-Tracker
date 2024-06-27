@@ -4,6 +4,8 @@ import SelectCountry from "@/components/tracker/globalData/selectCountry/SelectC
 import GlobalData from "@/components/tracker/globalData/GlobalData";
 import WorldWideData from "@/components/tracker/worldWideData/WorldWideData";
 import { URL_COUNTRIES, URL_ALL } from "@/config/urls"
+import Loader from "@/components/tracker/loader/Loader";
+import Error from "@/components/tracker/error/Error";
 
 const Tracker1 = () => {
   const [selectedCountry, setSelectedCountry] = useState("AF");
@@ -12,31 +14,34 @@ const Tracker1 = () => {
       ? URL_ALL
       : `${URL_COUNTRIES}/${selectedCountry}`;
 
-  const data = useApi(url);
-  const countries = useApi(URL_COUNTRIES);
+  const { data, loading, error } = useApi(url);
+  const { data: countries } = useApi(URL_COUNTRIES);
 
   return (
     <div>
-      {!data || !countries ? (
-        <div>Loading...</div>
-      ) : (
-        <>
-          <SelectCountry
-            selectedCountry={selectedCountry}
-            setSelectedCountry={setSelectedCountry}
-            countries={countries}
-          /> 
-          <div className="grid grid-cols-1 lg:grid-cols-2">
-            <GlobalData data={data} />
-            <img
-              src="/assets/images/image.png"
-              alt="mapimage"
-              className="p-3 mt-1"
-            />
-          </div>
-          <WorldWideData />
-        </>
-      )}
+      {loading ?
+        <Loader />
+        : error ?
+          <Error />
+          :
+          (
+            <>
+              <SelectCountry
+                selectedCountry={selectedCountry}
+                setSelectedCountry={setSelectedCountry}
+                countries={countries}
+              />
+              <div className="grid grid-cols-1 lg:grid-cols-2">
+                <GlobalData data={data} />
+                <img
+                  src="/assets/images/image.png"
+                  alt="mapimage"
+                  className="p-3 mt-1"
+                />
+              </div>
+              <WorldWideData />
+            </>
+          )}
     </div>
   );
 };
