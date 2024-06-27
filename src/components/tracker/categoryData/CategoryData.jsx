@@ -2,12 +2,14 @@ import useApi from "@/services/useApi";
 import { URL_COUNTRIES } from "@/config/urls";
 import ListTopCategories from "./listTopCategories/ListTopCategories";
 import WidgetHead from "../widgetHead/WidgetHead";
+import Loader from "../loader/Loader";
+import Error from "../error/Error";
 
 
 const CategoryData = () => {
-    const data = useApi(URL_COUNTRIES) || [];
+    const { data, loading, error } = useApi(URL_COUNTRIES) || [];
 
-    
+
     const tenTopCases = data?.map((country) => {
         return {
             name: country.country,
@@ -59,18 +61,25 @@ const CategoryData = () => {
 
 
     return (
-        <>
+        <section>
             <WidgetHead text="Top 10 Countries wise Covid-19 Updates - Tiles" />
-            <section className="flex flex-row ml-5">
-                <ListTopCategories title="Top Cases" array={tenTopCases} />
-                <ListTopCategories title="Today Cases" array={todayCases} />
-                <ListTopCategories title="Today Deaths" array={todayDeaths} />
-                <ListTopCategories title="Today Critical" array={todayCritical} />
-                <ListTopCategories title="Top Active" array={topActive} />
-                <ListTopCategories title="Top Recovered" array={topRecovered} />
-            </section>
 
-        </>
+            {loading ?
+                <Loader />
+
+            : error ? 
+            <Error />
+                :
+                (<div className="flex flex-row flex-wrap justify-evenly">
+                    <ListTopCategories title="Top Cases" array={tenTopCases} />
+                    <ListTopCategories title="Today Cases" array={todayCases} />
+                    <ListTopCategories title="Today Deaths" array={todayDeaths} />
+                    <ListTopCategories title="Today Critical" array={todayCritical} />
+                    <ListTopCategories title="Top Active" array={topActive} />
+                    <ListTopCategories title="Top Recovered" array={topRecovered} />
+                </div>)
+            }
+        </section>
 
     )
 }

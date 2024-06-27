@@ -11,13 +11,13 @@ const SelectCountry = ({ selectedCountry, setSelectedCountry, countries }) => {
     : firstCountry.country;
 
   return (
-    <div className="p-4 flex items-center justify-between pb-4 w-full border-b" style={{ borderBottomColor: 'var(--col-grey)', borderBottomWidth: '1px' }}>
+    <div className="flex flex-col items-center justify-between w-full gap-2 py-4 mx-2 border-b lg:mx-4 lg:flex-row" style={{ borderBottomColor: 'var(--col-grey)', borderBottomWidth: '1px' }}>
       <Select
         className="bg-[color:var(--col-body)]"
         value={selectedCountry}
         onValueChange={setSelectedCountry}
       >
-        <SelectTrigger className="w-[180px] bg-[color:var(--col-body)]">
+        <SelectTrigger className="w-full lg:w-[180px] bg-[color:var(--col-body)]">
           <SelectValue className="bg-[color:var(--col-body)]">{selectedCountryName}</SelectValue>
         </SelectTrigger>
         <SelectContent className="bg-[color:var(--col-body)]">
@@ -28,7 +28,7 @@ const SelectCountry = ({ selectedCountry, setSelectedCountry, countries }) => {
           )) : <SelectItem value="Select"></SelectItem>}
         </SelectContent>
       </Select>
-      <p className="flex">Updated: January 31, 2022</p>
+      <p className="text-sm">Updated: January 31, 2022</p>
     </div>
   );
 };

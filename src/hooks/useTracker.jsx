@@ -6,7 +6,7 @@ import { mapTableHeadToKey, sortData, filterData } from '@/utils/utils.js';
 import usePagination from './usePagination';
 
 const useTracker = () => {
-    const data = useApi(URL_COUNTRIES) || [];
+    const {data, loading, error }= useApi(URL_COUNTRIES) || [];
     const [itemsToShow, setItemsToShow] = useState(10);
     const [filter, setFilter] = useState("");
     const [sortedData, setSortedData] = useState([]);
@@ -60,7 +60,9 @@ const useTracker = () => {
         setFilter,
         currentPage,
         totalPages,
-        itemsToShow
+        itemsToShow,
+        loading,
+        error
     };
 };
 
