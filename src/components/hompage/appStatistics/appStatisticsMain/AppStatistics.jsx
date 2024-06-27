@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button"
 
 const AppStatistics = () => {
     return (
-        <div className="mt-4 mb-8">
+        <div className="mt-[-4em] mb-8">
         <section className="flex flex-row pt-6 justify-center items-center w-[80%] m-auto gap-[60px]">
             <img src="/assets/images/mobiles.png" alt="phone with blue background and chart on screen" className="w-[40%] h-[100%]" />
             <aside className="w-[40%]">

@@ -12,10 +12,8 @@ const Home = () => {
     return (
         <>
             <main className="w-[100%] bg-[color:var(--col-home-main)]">
-               
                 <HeroSection />
-                
-                <div className="mx-[10vw] pb-[10%] ">
+                <div className="mx-[10vw]">
                     <IconBar />
                 </div>
                 <CarouselSection />
