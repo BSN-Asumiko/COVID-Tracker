@@ -6,10 +6,6 @@ const GlobalData = ({ data }) => {
   // Si data es un array, tomamos el primer elemento (asumiendo que es el objeto que necesitamos)
   const globalData = Array.isArray(data) ? data[0] : data;
 
-  if (!globalData || typeof globalData !== 'object') {
-    return <div>Loading...</div>; 
-  }
-
   return (
     <ul className="grid grid-cols-2 gap-2 lg:gap-4">
       <GlobalItem title="Total Cases" value={globalData.cases || 0} imgSrc="/assets/images/icons/covid-defult.svg" key="atotal-cases" valueClassName="text-[color:var(--col-common-blue)]" />
