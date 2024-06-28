@@ -1,6 +1,4 @@
 /* eslint-disable react/prop-types */
-
-
 import { transformDataForChart } from '@/utils/transformData';
 import { Line } from 'react-chartjs-2';
 import {
@@ -13,6 +11,7 @@ import {
     Tooltip,
     Legend
 } from "chart.js"
+import WidgetHead from '../widgetHead/WidgetHead';
 
 Chartjs.register(
     CategoryScale,
@@ -27,12 +26,21 @@ Chartjs.register(
 const LinearGrafic = ({ country }) => {
     const { dates, casesData, deathsData, recoveredData } = transformDataForChart(country);
     const options = {
+        maintainAspectRatio: false,
         responsive: true,
         plugins: {
             legend: {
-                position: 'top',
-
+                labels: {
+                    usePointStyle: true,
+                },
             }
+        },
+        interaction: {
+            intersect: false,
+            mode: 'index',
+        },
+        layout: {
+            padding: '10px'
         }
     }
 
@@ -42,20 +50,24 @@ const LinearGrafic = ({ country }) => {
             {
                 label: 'Cases',
                 data: casesData.map(entry => entry.value),
-                borderColor: 'rgba(75, 192, 192, 1)',
-                fill: false,
+                borderColor: ' rgb(53, 56, 174)',
+                backgroundColor: ' rgb(53, 56, 174)',
+                fill: true,
+
             },
             {
                 label: 'Deaths',
                 data: deathsData.map(entry => entry.value),
-                borderColor: 'rgba(255, 99, 132, 1)',
-                fill: false,
+                borderColor: 'rgb(255, 0, 0)',
+                backgroundColor: 'rgb(255, 0, 0)',
+                fill: true,
             },
             {
                 label: 'Recovered',
                 data: recoveredData.map(entry => entry.value),
-                borderColor: 'rgba(54, 162, 235, 1)',
-                fill: false,
+                borderColor: 'rgb(127, 195, 22)',
+                backgroundColor: 'rgb(127, 195, 22)',
+                fill: true,
             },
         ],
     }
@@ -63,12 +75,14 @@ const LinearGrafic = ({ country }) => {
 
 
 
-
-
-
-
     return (
-        <Line options={options} data={data} />
+        <li className="bg-[color:var(--col-body)]">
+            <WidgetHead text={country.country}/>
+            <div className="relative p-5 w-[80vw]  h-[40vh] ml:w-[30vw]">
+            <Line options={options} data={data} />
+            </div>
+
+        </li>
     )
 }
 export default LinearGrafic

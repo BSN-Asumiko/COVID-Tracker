@@ -15,12 +15,17 @@ const Tracker6 = () => {
 
 
   return (
-      loading ? 
+    loading ?
       <Loader />
       : error ?
-      <Error />
-      : 
-      <LinearGrafic country={topCountries[0]}/>
+        <Error />
+        :
+        <ul className="grid grid-cols-1 ml:grid-cols-2 gap-5 place-items-center">
+          {
+            topCountries.map((country, index) => <LinearGrafic country={country} key={index} />)
+          }
+        </ul>
+
   )
 }
 
