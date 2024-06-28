@@ -1,43 +1,88 @@
 /* eslint-disable react/prop-types */
+import { transformDataForChart } from '@/utils/transformData';
+import { Line } from 'react-chartjs-2';
+import {
+    Chart as Chartjs,
+    CategoryScale,
+    LinearScale,
+    PointElement,
+    LineElement,
+    Title,
+    Tooltip,
+    Legend
+} from "chart.js"
+import WidgetHead from '../widgetHead/WidgetHead';
 
-import WidgetBody from "../widgetBody/WidgetBody";
-import WidgetHead from "../widgetHead/WidgetHead";
-import { PureComponent } from 'react';
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+Chartjs.register(
+    CategoryScale,
+    LinearScale,
+    PointElement,
+    LineElement,
+    Title,
+    Tooltip,
+    Legend
+)
 
-
-
-export default class LinearGrafic extends PureComponent {
-    render() {
-        console.log('LinearGrafic ' + this.props.country.data)
-        console.log(typeof this.props.country.data)
-        return (
-            <>
-                <WidgetHead text="" />
-                <WidgetBody>
-                    <ResponsiveContainer width="100%" height="100%">
-                        <LineChart
-                            width={500}
-                            height={300}
-                            data={this.props.country.data}
-                            margin={{
-                                top: 5,
-                                right: 30,
-                                left: 20,
-                                bottom: 5,
-                            }}
-                        >
-                            <CartesianGrid strokeDasharray="3 3" />
-                            <XAxis dataKey="name" />
-                            <YAxis />
-                            <Tooltip />
-                            <Legend />
-                            <Line type="monotone" dataKey="pv" stroke="#8884d8" strokeDasharray="5 5" />
-                            <Line type="monotone" dataKey="uv" stroke="#82ca9d" strokeDasharray="3 4 5 2" />
-                        </LineChart>
-                    </ResponsiveContainer>
-                </WidgetBody>
-            </>
-        );
+const LinearGrafic = ({ country }) => {
+    const { dates, casesData, deathsData, recoveredData } = transformDataForChart(country);
+    const options = {
+        maintainAspectRatio: false,
+        responsive: true,
+        plugins: {
+            legend: {
+                labels: {
+                    usePointStyle: true,
+                },
+            }
+        },
+        interaction: {
+            intersect: false,
+            mode: 'index',
+        },
+        layout: {
+            padding: '10px'
+        }
     }
+
+    const data = {
+        labels: dates,
+        datasets: [
+            {
+                label: 'Cases',
+                data: casesData.map(entry => entry.value),
+                borderColor: ' rgb(53, 56, 174)',
+                backgroundColor: ' rgb(53, 56, 174)',
+                fill: true,
+
+            },
+            {
+                label: 'Deaths',
+                data: deathsData.map(entry => entry.value),
+                borderColor: 'rgb(255, 0, 0)',
+                backgroundColor: 'rgb(255, 0, 0)',
+                fill: true,
+            },
+            {
+                label: 'Recovered',
+                data: recoveredData.map(entry => entry.value),
+                borderColor: 'rgb(127, 195, 22)',
+                backgroundColor: 'rgb(127, 195, 22)',
+                fill: true,
+            },
+        ],
+    }
+
+
+
+
+    return (
+        <li className="bg-[color:var(--col-body)]">
+            <WidgetHead text={country.country} className="px-5"/>
+            <div className="relative p-5 w-[80vw]  h-[40vh] ml:w-[30vw]">
+            <Line options={options} data={data} />
+            </div>
+
+        </li>
+    )
 }
+export default LinearGrafic
