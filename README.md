@@ -3,17 +3,17 @@
 
 ## Índice 📝
 
-- [Descripción](#descripcion)
-- [Instalación](#instalacion)
-    - [Requisitos previos](#requisitos-previos)
-    - [Instalación del proyecto](#instalacion-del-proyecto)
-- [Uso](#uso)
-- [Estructura del proyecto](#estructura-del-proyecto)
-- [Tecnologías](#tecnologias)
-- [Contribuición](#contribuicion)
-    - [Convenciones del proyecto](#convenciones-del-proyecto)
-- [Developers](#developers)
-- [Capturas de pantalla](#capturas-de-pantalla)
+- [Descripción](#descripcion-)
+- [Instalación](#instalacion-)
+    - [Requisitos previos](#requisitos-previos-)
+    - [Instalación del proyecto](#instalacion-del-proyecto-)
+- [Uso](#uso-)
+- [Estructura del proyecto](#estructura-del-proyecto-)
+- [Tecnologías](#tecnologias-)
+- [Contribuición](#contribuicion-)
+    - [Convenciones del proyecto](#convenciones-del-proyecto-)
+- [Developers](#developers-)
+- [Capturas de pantalla](#capturas-de-pantalla-)
 
 ## Descripción 💡
 
