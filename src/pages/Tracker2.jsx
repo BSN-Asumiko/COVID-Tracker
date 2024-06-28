@@ -29,7 +29,7 @@ const Tracker2 = () => {
 
   return (
     <div className="w-[90%]">
-      <WidgetHead text="Ajax Data Table - COVID 19 Country Wise State" className="bg-[color:var(--col-body)]" />
+      <WidgetHead text="Ajax Data Table - COVID 19 Country Wise State" className="bg-[color:var(--col-body)] px-5" />
       {loading ?
         <Loader />
         : error ?

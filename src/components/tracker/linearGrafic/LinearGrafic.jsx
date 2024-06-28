@@ -77,7 +77,7 @@ const LinearGrafic = ({ country }) => {
 
     return (
         <li className="bg-[color:var(--col-body)]">
-            <WidgetHead text={country.country}/>
+            <WidgetHead text={country.country} className="px-5"/>
             <div className="relative p-5 w-[80vw]  h-[40vh] ml:w-[30vw]">
             <Line options={options} data={data} />
             </div>
