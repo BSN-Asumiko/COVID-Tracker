@@ -2,16 +2,16 @@
 
 ## Índice 📝
 
-- [Descripción](#descripción)
-- [Instalación](#instalación)
+- [Descripción](#descripción-)
+- [Instalación](#instalación-)
   - [Requisitos previos](#requisitos-previos)
   - [Instalación del proyecto](#instalación-del-proyecto)
-- [Uso](#uso)
+- [Uso](#uso-)
 - [Estructura del proyecto](#estructura-del-proyecto)
-- [Tecnologías](#tecnologías)
-- [Contribuición](#contribuición)
+- [Tecnologías](#tecnologías-)
+- [Contribuición](#contribuición-)
   - [Convenciones del proyecto](#convenciones-del-proyecto)
-- [Developers](#developers)
+- [Developers](#developers-)
 - [Capturas de pantalla](#capturas-de-pantalla)
 
 ## Descripción 💡
