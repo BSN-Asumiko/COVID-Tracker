@@ -1,25 +1,25 @@
-
 # Covid Tracker 💊 🧫
 
 ## Índice 📝
 
-- [Descripción](#descripcion-)
-- [Instalación](#instalacion-)
-    - [Requisitos previos](#requisitos-previos-)
-    - [Instalación del proyecto](#instalacion-del-proyecto-)
-- [Uso](#uso-)
-- [Estructura del proyecto](#estructura-del-proyecto-)
-- [Tecnologías](#tecnologias-)
-- [Contribuición](#contribuicion-)
-    - [Convenciones del proyecto](#convenciones-del-proyecto-)
-- [Developers](#developers-)
-- [Capturas de pantalla](#capturas-de-pantalla-)
+- [Descripción](#descripción)
+- [Instalación](#instalación)
+  - [Requisitos previos](#requisitos-previos)
+  - [Instalación del proyecto](#instalación-del-proyecto)
+- [Uso](#uso)
+- [Estructura del proyecto](#estructura-del-proyecto)
+- [Tecnologías](#tecnologías)
+- [Contribuición](#contribuición)
+  - [Convenciones del proyecto](#convenciones-del-proyecto)
+- [Developers](#developers)
+- [Capturas de pantalla](#capturas-de-pantalla)
 
 ## Descripción 💡
 
 Proyecto de estudiantes para la creación de un tracker COVID-19, en el que se consume la API de [disease.sh](http://disease.sh/) para extraer información de forma dinámica. Los objetivos principales del proyecto han sido aplicar conceptos fundamentales de React y del consumo de APIs.
 
 ## Instalación 💾
+
 ### Requisitos previos
 
 Instalar Node.js:
@@ -28,27 +28,28 @@ Instalar Node.js:
 ### Instalación del proyecto
 
 1. Clonar el repositorio:
+
 ```bash
  git clone https://github.com/BSN-Asumiko/COVID-Tracker
 ```
 
 2. Instalar dependencias:
+
 ```bash
  npm install
- ```
+```
 
 ## Uso ⌨️
 
-Para visualizar el proyecto: 
+Para visualizar el proyecto:
 
 1. Ejecuta el servidor de desarrollo:
-    ```bash
-    npm run dev
-    ```
+   ```bash
+   npm run dev
+   ```
 2. Abre el local host en tu navegador para ver la aplicación.
 
-
-## Estructura del proyecto 📐 
+## Estructura del proyecto 📐
 
 ```plaintext
 /
@@ -79,18 +80,18 @@ Para visualizar el proyecto:
 └── vite.config.js
 
 ```
+
 - **public/:** Contiene los recursos estáticos del proyecto como imágenes, iconos y fuentes.
 - **src/:** Contiene los archivos fuente de la aplicación.
-    - ***components/:*** Contiene los componentes reutilizables de React.
-        - ***homepage/:*** Contiene todos los componentes, separados por carpetas individuales, que forman la parte de homepage del proyecto.
-        - ***tracker/:*** Contiene todos los componentes, separados por carpetas individuales, que forman la parte de tracker del proyecto.
-        - ***ui/:*** Contiene los componentes importados de la librería shadcn.
-    - ***config/:*** Contiene el arcihvo urls.js, que nos ayuda a dinamizar la llamada a la API.
-    - **layout:** Carpeta que contiene las rutas de los dos layouts principales (homepage y tracker) de la aplicación.
-    - ***pages:*** Carpeta que contiene las rutas a las páginas dinámicas de la aplicación.
-    - ***router:*** Dentro del que se encuentra index.jsx, que contiene la lógica de rutas de la aplicación.
-    - ***services:*** Dentro del que se encuentra useApi.jsx con la llamada a la API reutilizada en todos los apartados de la aplicación. 
-
+  - **_components/:_** Contiene los componentes reutilizables de React.
+    - **_homepage/:_** Contiene todos los componentes, separados por carpetas individuales, que forman la parte de homepage del proyecto.
+    - **_tracker/:_** Contiene todos los componentes, separados por carpetas individuales, que forman la parte de tracker del proyecto.
+    - **_ui/:_** Contiene los componentes importados de la librería shadcn.
+  - **_config/:_** Contiene el arcihvo urls.js, que nos ayuda a dinamizar la llamada a la API.
+  - **layout:** Carpeta que contiene las rutas de los dos layouts principales (homepage y tracker) de la aplicación.
+  - **_pages:_** Carpeta que contiene las rutas a las páginas dinámicas de la aplicación.
+  - **_router:_** Dentro del que se encuentra index.jsx, que contiene la lógica de rutas de la aplicación.
+  - **_services:_** Dentro del que se encuentra useApi.jsx con la llamada a la API reutilizada en todos los apartados de la aplicación.
 
 ## Tecnologías 🔬
 
@@ -102,7 +103,6 @@ Para visualizar el proyecto:
 - [TailwindCSS](https://tailwindcss.com/)
 - [Shadcn // ui](https://ui.shadcn.com/)
 
-
 ## Contribuición 💻
 
 1. Haz fork al repositorio.
@@ -113,9 +113,9 @@ Para visualizar el proyecto:
 
 ### Convenciones del proyecto
 
-Uso de GitFlow. 
+Uso de GitFlow.
 
-Trabajamos desde y a la rama dev. 
+Trabajamos desde y a la rama dev.
 
 Estilos CSS con Tailwind CSS.
 
@@ -125,17 +125,17 @@ Nombramiento de las carpetas y documentos jsx:
 
 ```bash
  componentes
-    soyUnComponente 📂     
+    soyUnComponente 📂
         SoyUnComponente.jsx
 ```
 
 ## Developers 👩‍💻
 
-- [Jessica Arroyo](https://github.com/jess-ar) 
-- [Ekaterina Buinovskaia](https://github.com/BSN-Asumiko) 
-- [Betty Lopez](https://github.com/BettyLopo) 
+- [Jessica Arroyo](https://github.com/jess-ar)
+- [Ekaterina Buinovskaia](https://github.com/BSN-Asumiko)
+- [Betty Lopez](https://github.com/BettyLopo)
 - [Carla Sánchez](https://github.com/Carlassanchez24)
-- [Valentina Toni](https://github.com/ItalianCookieMonster) 
+- [Valentina Toni](https://github.com/ItalianCookieMonster)
 
 ## Capturas de Pantalla 📸
 
@@ -154,5 +154,3 @@ Nombramiento de las carpetas y documentos jsx:
 ![image](https://github.com/BSN-Asumiko/COVID-Tracker/assets/168748574/821a8918-9fb7-41fb-9e7f-aa449fa765b6)
 
 ![image](https://github.com/BSN-Asumiko/COVID-Tracker/assets/168748574/3946bf25-6c29-48ee-b76a-39d41beffd4d)
-
-
