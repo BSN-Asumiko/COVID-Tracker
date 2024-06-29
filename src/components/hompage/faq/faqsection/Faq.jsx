@@ -2,7 +2,7 @@ import Accordion from "../accordion/Accordion";
 
 const Faq = () => {
     return (
-        <section className="flex flex-col p-6 justify-center gap-5">
+        <section className="flex flex-col justify-center gap-5">
             <div className="text-center w-[50%] m-auto">
                 <p className=" text-[medium] text-[color:var(--col-body)] opacity-80 tracking-[0.1em] ">Faqs</p>
                 <h1 className=" text-[xxx-large] font-bold text-[color:var(--col-body)] leading-[60px]">Frequently Asked Questions</h1>
