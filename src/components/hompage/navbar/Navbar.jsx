@@ -24,7 +24,7 @@ const Navbar = () => {
                     <span className="icon" >&#xE6C3;</span>
                 </button>
             </div>
-                <ul className={`${isOpen ? 'block' : 'hidden'} absolute px-[6cqw] py-[2em] ml:static text-left bg-[color:var(--col-body)] ml:flex ml:flex-row mt-4 ml:mt-0 items-center gap-[1.5em]`}>
+                <ul className={`${isOpen ? 'block' : 'hidden'} absolute pr-[6cqw] py-[2em] ml:static text-left bg-[color:var(--col-body)] ml:flex ml:flex-row mt-4 ml:mt-0 items-center gap-[1.5em]`}>
                     <NavItem content = "Home" icon="&#xf0d7;"/>
                     <NavItem content = "Prevention"/>
                     <NavItem content = "Qurantine"/>
