@@ -7,7 +7,7 @@ const Footer = () => {
         <footer className="w-screen flex flex-col bottom-0 bg-[color:var(--col-home-footer)] 
         text-[color:var(--col-body)] py-[3.5em]">
             <section className="flex">
-                <div className="w-[32%] pl-[7cqw] mr-[3em]">
+                <div className="w-full ml:w-[32%] pl-[7cqw] mx-[1em] ml:mr-[3em] ">
                     <img src="/assets/images/logo-white.png" alt="Covimap logo" />
                     <p className="my-[1.8em] text-[0.9em] opacity-[50%] font-extralight tracking-[0.04em]  leading-[2em]">These droplets can land on objects and surfaces around the person such as tables, doorknobs and handrails.
                     </p>
@@ -18,7 +18,7 @@ const Footer = () => {
                         <IconItem icon="&#xf167;" link="https://www.youtube.com/"/>
                     </ul>
                 </div>
-                <div className="w-[65%] flex justify-around">
+                <div className="w-[65%] justify-around hidden ml:flex">
                     <FooterColumns />
                 </div>
             </section>

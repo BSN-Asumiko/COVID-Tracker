@@ -23,7 +23,7 @@ const AjaxTable = ({ tableHeads, displayedData, handleSort, sortConfig }) => {
                                 <button className="flex" type="button" onClick={() => handleSort(th)}>
                                     <span className="sr-only">sort data per {th}</span>
                                     {th}
-                                    <img className="w-5" src={`/public/assets/images/${sortConfig.direction === 'ascending' ? 'sort_asc.png' : 'sort_desc.png'}`} alt="sort icon" />
+                                    <img className="w-5" src={`/assets/images/${sortConfig.direction === 'ascending' ? 'sort_asc.png' : 'sort_desc.png'}`} alt="sort icon" />
                                 </button>
                             </TableHead>
                         ))

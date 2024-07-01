@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 
 const CarouselCard = ({color, icon, title, text}) => {
     return (
