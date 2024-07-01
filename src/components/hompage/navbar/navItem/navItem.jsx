@@ -2,7 +2,7 @@
 const NavItem = ({content, icon}) => {
     return (
         <>
-            <li className="text-[color:var(--col-dark-blue)] hover:cursor-pointer">{content} <span className="icon-f">{icon}</span></li>
+            <li className="text-[color:var(--col-dark-blue)] hover:cursor-pointer flex gap-2">{content} <span className="icon-f">{icon}</span></li>
         </>
     )
 }
