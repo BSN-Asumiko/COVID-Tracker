@@ -16,31 +16,31 @@ const WorldWideData = () => {
                     <WorldWideItem
                         title="Total Confirmed:"
                         value={worldData.cases}
-                        imageSrc="\public\assets\images\icons\covid-defult.svg"
+                        imageSrc="\assets\images\icons\covid-defult.svg"
                         key="total-confirmed"
                     />
                     <WorldWideItem
                         title="Total Recovered:"
                         value={worldData.recovered}
-                        imageSrc="\public\assets\images\icons\covid-green.svg"
+                        imageSrc="\assets\images\icons\covid-green.svg"
                         key="total-recovered"
                     />
                     <WorldWideItem
                         title="Total Deaths:"
                         value={worldData.deaths}
-                        imageSrc="\public\assets\images\icons\covid-orange.svg"
+                        imageSrc="\assets\images\icons\covid-orange.svg"
                         key="total-deaths"
                     />
                     <WorldWideItem
                         title="New Deaths:"
                         value={worldData.todayDeaths}
-                        imageSrc="\public\assets\images\icons\covid-red.svg"
+                        imageSrc="\assets\images\icons\covid-red.svg"
                         key="new-deaths"
                     />
                     <WorldWideItem
                         title="Help Line No."
                         value={198}
-                        imageSrc="\public\assets\images\icons\telephone.svg"
+                        imageSrc="\assets\images\icons\telephone.svg"
                         key="help-line"
                     />
                 </ul>)

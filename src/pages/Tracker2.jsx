@@ -9,6 +9,7 @@ import Loader from '@/components/tracker/loader/Loader';
 import Error from '@/components/tracker/error/Error';
 
 const Tracker2 = () => {
+  
   const {
     tableHeads,
     displayedData,

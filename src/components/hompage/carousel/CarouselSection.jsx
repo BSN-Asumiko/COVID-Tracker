@@ -1,4 +1,4 @@
-
+/* eslint-disable no-unused-vars */
 import CarouselComponent from "./CarouselComponent";
 
 export function CarouselSection() {

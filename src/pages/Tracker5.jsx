@@ -1,7 +1,8 @@
+import WorkInProgress from "@/components/tracker/workInProgress/WorkInProgress";
 
 const Tracker5 = () => {
   return (
-    <div>Tracker5</div>
+    <WorkInProgress/>
   )
 }
 

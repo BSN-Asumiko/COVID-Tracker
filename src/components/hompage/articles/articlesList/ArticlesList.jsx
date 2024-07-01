@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import ArticleItem from "../articleItem/ArticleItem";
 
 const ArticlesList = ({className}) => {

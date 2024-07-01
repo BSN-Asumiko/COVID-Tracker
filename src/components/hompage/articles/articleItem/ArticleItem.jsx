@@ -1,4 +1,5 @@
-const ArticleItem = ({title, image, alt, className, size,colorP}) => {
+/* eslint-disable react/prop-types */
+const ArticleItem = ({title, image, alt, className, size, colorP}) => {
 
     return (
         <div className={className}>

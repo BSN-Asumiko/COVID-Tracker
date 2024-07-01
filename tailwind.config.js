@@ -1,4 +1,3 @@
-/* eslint-disable no-undef */
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: ["class"],
@@ -18,7 +17,6 @@ module.exports = {
       },
     },
     extend: {
-      
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -54,16 +52,6 @@ module.exports = {
           foreground: "hsl(var(--card-foreground))",
         },
       },
-      filter: {
-        'none': 'none',
-        'grayscale': 'grayscale(1)',
-        'invert': 'invert(1)',
-        'sepia': 'sepia(1)',
-        'opacity-20': 'opacity(0.2)',
-        'saturate-0': 'saturate(0)',
-        'brightness_75': 'brightness(75%)',
-
-      },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
@@ -82,28 +70,8 @@ module.exports = {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        'spin-slow': 'spin 4s linear infinite',
       },
-      containers: {
-        '2xs': '14.25em',
-        '3xs': '7rem',
-      },
-
-      screens: {
-        'ml': '900px'
-      }
     },
   },
-
-  variants: {
-    extend: {
-      animation: ['hover', 'group-hover'],
-    },
-  },
-
-
-  plugins: [require("tailwindcss-animate"), 
-            require('@tailwindcss/container-queries')],
-  
-  
+  plugins: [require("tailwindcss-animate")],
 }

@@ -11,7 +11,7 @@ const SelectCountry = ({ selectedCountry, setSelectedCountry, countries }) => {
     : firstCountry.country;
 
   return (
-    <div className="flex flex-col items-center justify-between w-full gap-2 py-4 mx-2 border-b lg:mx-4 lg:flex-row" style={{ borderBottomColor: 'var(--col-grey)', borderBottomWidth: '1px' }}>
+    <div className="flex flex-col items-center justify-between gap-2 py-4 mx-2 border-b lg:mx-4 lg:flex-row" style={{ borderBottomColor: 'var(--col-grey)', borderBottomWidth: '1px' }}>
       <Select
         className="bg-[color:var(--col-body)]"
         value={selectedCountry}
