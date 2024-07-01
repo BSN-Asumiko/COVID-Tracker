@@ -4,9 +4,9 @@ import { Button } from "@/components/ui/button"
 const AppStatistics = () => {
     return (
         <div className="mt-[-4em] mb-8">
-        <section className="flex flex-row pt-6 justify-center items-center w-[80%] m-auto gap-[60px]">
-            <img src="/assets/images/mobiles.png" alt="phone with blue background and chart on screen" className="w-[40%] h-[100%]" />
-            <aside className="w-[40%]">
+        <section className="flex flex-col ml:flex-row pt-6 justify-center items-center w-[80%] m-auto gap-[60px]">
+            <img src="/assets/images/mobiles.png" alt="phone with blue background and chart on screen" className="w-[80%] ml:w-[40%] h-[100%]" />
+            <aside className="ml:w-[40%] w-[80%]">
                 <h1 className="text-[xxx-large] font-bold text-[color:var(--col-body)] leading-[50px] mb-6 mt-7">Stay Home, And Pray For Victims</h1>
                 <p className="text-[medium] text-[color:var(--col-body)] opacity-80 font-light">Human coronaviruses are common and are typically associated with mild illness, similar to the common cold.</p>
                 <br/>
