@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import ArticleItem from "@/components/hompage/articles/articleItem/ArticleItem";
 
 const BlogPosts = ({className}) => {
