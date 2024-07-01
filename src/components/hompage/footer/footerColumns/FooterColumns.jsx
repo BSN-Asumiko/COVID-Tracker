@@ -5,7 +5,7 @@ const FooterColumns = () => {
     return (
         < >
             {links.map((object, index) => (
-                <ul key={index} className="text-[0.8em] tracking-[0.04em]">
+                <ul key={index} className="text-[0.8em] tracking-[0.04em] ">
                     <p className="">{object.title}</p>
                     <FooterLink link = {object.link1}/>
                     <FooterLink link = {object.link2}/>
